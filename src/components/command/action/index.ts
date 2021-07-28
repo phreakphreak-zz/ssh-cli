@@ -1,5 +1,8 @@
-import { Command } from 'commander';
+import { IAction } from './IAction';
 
-const cmd = new Command();
+const ActionBuilder = (actionInputs: IAction) => {
+    const { options, args } = actionInputs;
+    console.log(args, options);
+};
 
-cmd.action(() => {});
+export default ActionBuilder;
