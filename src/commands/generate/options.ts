@@ -1,6 +1,6 @@
-import { IOption } from 'components/command/option/IOption';
+import { IOption } from '../../components/command/option/IOption';
 
-const options: IOption[] = [
+export const options: IOption[] = [
     {
         name: 'bits',
         flag: '-b, --bits <type>',
@@ -22,5 +22,3 @@ const options: IOption[] = [
         description: 'The passphrase to use for the generated key. Default: empty'
     }
 ];
-
-export default options;
