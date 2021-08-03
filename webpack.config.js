@@ -2,6 +2,11 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 9000
+    },
     target: 'node',
     entry: path.resolve(__dirname, './src/index.ts'),
     module: {
@@ -10,6 +15,11 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.js$/,
+                use: ['source-map-loader'],
+                enforce: 'pre'
             }
         ]
     },
