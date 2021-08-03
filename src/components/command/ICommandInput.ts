@@ -1,4 +1,4 @@
-export interface ICommand {
+export interface ICommandInput {
     name: string;
     description: string;
 }

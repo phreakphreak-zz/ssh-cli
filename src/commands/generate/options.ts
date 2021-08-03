@@ -1,6 +1,6 @@
-import { IOption } from '../../components/command/option/IOption';
+import { IOptionInput } from '../../components/command/option/IOptionInput';
 
-export const options: IOption[] = [
+export const options: IOptionInput[] = [
     {
         name: 'bits',
         flag: '-b, --bits <type>',

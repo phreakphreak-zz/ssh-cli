@@ -1,7 +1,7 @@
 import { Argument } from 'commander';
-import { IArgument } from './IArgument';
+import { IArgumentInput } from './IArgumentInput';
 
-const ArgumentBuilder = (args: IArgument[]): Argument[] => {
+const ArgumentBuilder = (args: IArgumentInput[]): Argument[] => {
     return args.map(({ arg, description }): Argument => {
         return new Argument(arg, description);
     });

@@ -1,4 +1,4 @@
-export interface IOption {
+export interface IOptionInput {
     name?: string;
     flag: string;
     description: string;

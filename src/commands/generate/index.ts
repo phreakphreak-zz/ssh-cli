@@ -1,12 +1,6 @@
 import CommandHandler from '../../components/command';
 import { options } from './options';
 import { args } from './arguments';
+import { input } from './input';
 
-export const generateCommand = CommandHandler(
-    {
-        name: 'generate',
-        description: 'Generate a new SSH Id'
-    },
-    args,
-    options
-);
+export const generateCommand = CommandHandler(input, args, options);

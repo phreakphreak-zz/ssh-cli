@@ -1,12 +1,16 @@
 import { Command, Argument, Option } from 'commander';
-import { ICommand } from './ICommand';
-import { IArgument } from './argument/IArgument';
-import { IOption } from './option/IOption';
+import { ICommandInput } from './ICommandInput';
+import { IArgumentInput } from './argument/IArgumentInput';
+import { IOptionInput } from './option/IOptionInput';
 import optionBuilder from './option';
 import argumentBuilder from './argument';
 import actionBuilder from './action';
 
-const CommandBuilder = (commandInput: ICommand, argsInput: IArgument[], optionsInput: IOption[]): Command => {
+const CommandBuilder = (
+    commandInput: ICommandInput,
+    argsInput: IArgumentInput[],
+    optionsInput: IOptionInput[]
+): Command => {
     const args: Argument[] = argumentBuilder(argsInput);
     const options: Option[] = optionBuilder(optionsInput);
     const command: Command = new Command(commandInput.name).description(commandInput.description);
